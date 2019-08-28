@@ -11,6 +11,6 @@
     <title>Hello Servlets</title>
 </head>
 <body>
-    <h1>Hello Servlets!!!</h1>
+    <h1 style="color: blue">Hello Servlets!!!</h1>
 </body>
 </html>
