@@ -1,3 +1,5 @@
+import model.Empresa;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +18,10 @@ public class CadastroEmpresaServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException,IOException {
 
-        System.out.println("log: iniciando Cadastro empresa");
-
         String nomeEmpresa = request.getParameter("nome");
+        
+        Empresa empresa = new Empresa();
+        empresa.setNome(nomeEmpresa);
 
         PrintWriter out = response.getWriter();
         out.println("<html><body>Empresa >> "+ nomeEmpresa +"  << CADASTRA COM SUCESSO</body></html>");
