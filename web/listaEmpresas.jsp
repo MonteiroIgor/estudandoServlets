@@ -14,9 +14,12 @@
 </head>
 <body>
 
-Empresas: </br>
+
 
 <ul>
+
+    <h3>Empresas: </h3>
+
     <%
         List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");
         for (Empresa empresa : lista){
