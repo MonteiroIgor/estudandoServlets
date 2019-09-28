@@ -9,12 +9,9 @@
 <div align="center">
 <form action="/servlets_Web_exploded/cadastroEmpresa" method="post">
 
-
     Nome: <input type="text" name="nome"/>
-<!--    CNPJ: <input type="text" name="cnpj"/>-->
-<!--    Telefone: <input type="text" name="telefone"/>-->
+    Data Abertura: <input type="text" name="data"/>
     <input type="submit" />
-
 
 </form>
 </div>

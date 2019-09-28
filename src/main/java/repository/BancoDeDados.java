@@ -3,6 +3,7 @@ package repository;
 import model.Empresa;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class BancoDeDados {
@@ -14,9 +15,13 @@ public class BancoDeDados {
     static {
         Empresa empresa = new Empresa();
         empresa.setNome("Auto Peças");
+        empresa.setId(101);
+        empresa.setDataAbertura(new Date());
 
         Empresa empresa2 = new Empresa();
         empresa2.setNome("Moto Shopping");
+        empresa2.setId(102);
+        empresa2.setDataAbertura(new Date());
 
         list.add(empresa);
         list.add(empresa2);

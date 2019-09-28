@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: CONDUCTOR\igor.monteiro
@@ -12,12 +13,24 @@
 </head>
 <body>
 
-<div>
+<div align="center">
+
+    <c:if test="${empty empresa}">
+        Não foi registrado cadastro de Empresa.
+    </c:if>
+
+    <c:if test="${not empty empresa}">
 
     <%String empresa = (String) request.getAttribute("empresa");%>
-    <p><strong style="color: blue"><%=empresa%>, Cadastrada com Sucesso</strong></p>
+    <p><strong style="color: blue"><%=empresa%>, Cadastrada com Sucesso</strong></p></br>
+
+    <%--EXPRESSION LANGUAGE--%>
+    <p>${"Sucesso!!!"}</p>
+
+    </c:if>
 
 </div>
+
 
 </body>
 </html>

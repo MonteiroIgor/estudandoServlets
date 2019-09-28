@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="model.Empresa" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %><%--
@@ -14,22 +16,25 @@
 </head>
 <body>
 
-
-
 <ul>
-
     <h3>Empresas: </h3>
+    <%--JSTL--%>
+    <c:forEach items="${empresas}" var="empresa">
 
-    <%
-        List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");
-        for (Empresa empresa : lista){
-    %>
-        <li><%= empresa.getNome()%></li>
-    <%
-        }
-    %>
-
+    <li>Nome: ${empresa.nome}   ||   ID: ${empresa.id}   ||   Data Abertura: <fmt:formatDate value="${empresa.dataAbertura}"/></li>
+    </c:forEach>
 </ul>
+
+<%--<ul>--%>
+<%--    <%-SCRIPLETS-%>
+<%--        List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");--%>
+<%--        for (Empresa empresa : lista){--%>
+<%--    %>--%>
+<%--        <li><%= empresa.getNome()%></li>--%>
+<%--    <%--%>
+<%--        }--%>
+<%--    %>--%>
+<%--</ul>--%>
 
 </body>
 </html>
